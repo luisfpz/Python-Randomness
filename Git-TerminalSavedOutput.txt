@@ -1,0 +1,144 @@
+Last login: Tue Jun 25 10:59:31 on ttys000
+luisfp@luiss-MBP ~ % cd desktop
+luisfp@luiss-MBP desktop % ls
+Stuff
+The writing rope a framework for explicit writing instruction in all subjects.pdf
+To-do
+my_project
+luisfp@luiss-MBP desktop % mkdir python_randomness
+luisfp@luiss-MBP desktop % cd python_randomness
+luisfp@luiss-MBP python_randomness % git init
+Initialized empty Git repository in /Users/luisfp/Desktop/python_randomness/.git/
+luisfp@luiss-MBP python_randomness % git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+luisfp@luiss-MBP python_randomness % git remote add origin https://github.com/luisfpz/Python-Randomness.git
+luisfp@luiss-MBP python_randomness % git pull origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 861 bytes | 287.00 KiB/s, done.
+From https://github.com/luisfpz/Python-Randomness
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+luisfp@luiss-MBP python_randomness % ls
+README.md
+luisfp@luiss-MBP python_randomness % git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+	status
+	stage
+	stash
+luisfp@luiss-MBP python_randomness % git status
+On branch main
+nothing to commit, working tree clean
+luisfp@luiss-MBP python_randomness % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+luisfp@luiss-MBP python_randomness % git commit -m "Modified README.MD"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+luisfp@luiss-MBP python_randomness % git commit -a
+Aborting commit due to empty commit message.
+luisfp@luiss-MBP python_randomness % git commit -am "updated README.md"
+[main adbf706] updated README.md
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+luisfp@luiss-MBP python_randomness % git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 378 bytes | 378.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/luisfpz/Python-Randomness.git
+   9a955ba..adbf706  main -> main
+luisfp@luiss-MBP python_randomness % git status
+On branch main
+nothing to commit, working tree clean
+luisfp@luiss-MBP python_randomness % touch Notes-Git.md
+luisfp@luiss-MBP python_randomness % git commit -am "notes file on git"
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Notes-Git.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+luisfp@luiss-MBP python_randomness % git push origin main
+Everything up-to-date
+luisfp@luiss-MBP python_randomness % git add Notes-Git.md
+luisfp@luiss-MBP python_randomness % git commit -am "new notes file on git"
+[main 6d79e01] new notes file on git
+ 1 file changed, 23 insertions(+)
+ create mode 100644 Notes-Git.md
+luisfp@luiss-MBP python_randomness % git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 470 bytes | 470.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/luisfpz/Python-Randomness.git
+   adbf706..6d79e01  main -> main
+luisfp@luiss-MBP python_randomness % git clone https://github.com/rkneusel9/TheArtOfRandomness.git
+Cloning into 'TheArtOfRandomness'...
+remote: Enumerating objects: 585, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 585 (delta 6), reused 14 (delta 2), pack-reused 564
+Receiving objects: 100% (585/585), 183.92 MiB | 12.89 MiB/s, done.
+Resolving deltas: 100% (39/39), done.
+luisfp@luiss-MBP python_randomness % ls
+Notes-Git.md		README.md		TheArtOfRandomness
+luisfp@luiss-MBP python_randomness % brew install ent
+==> Auto-updating Homebrew...
+Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with
+HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Homebrew collects anonymous analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics have been recorded yet (nor will be during this `brew` run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Downloading https://ghcr.io/v2/homebrew/core/ent/manifests/1.0
+############################################################################### 100.0%
+==> Fetching ent
+==> Downloading https://ghcr.io/v2/homebrew/core/ent/blobs/sha256:f95e748a208f421f6d85
+############################################################################### 100.0%
+==> Pouring ent--1.0.arm64_sonoma.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/ent/1.0: 6 files, 88.0KB
+==> Running `brew cleanup ent`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+luisfp@luiss-MBP python_randomness % ls
+Notes-Git.md		README.md		TheArtOfRandomness
+luisfp@luiss-MBP python_randomness % cd TheArtOfRandomness
+luisfp@luiss-MBP TheArtOfRandomness % cd chapter_01
+luisfp@luiss-MBP chapter_01 % ent ent_test.bin
+Entropy = 7.999996 bits per byte.
+
+Optimum compression would reduce the size
+of this 40000000 byte file by 0 percent.
+
+Chi square distribution for 40000000 samples is 241.36, and randomly
+would exceed this value 72.09 percent of the times.
+
+Arithmetic mean value of data bytes is 127.5064 (127.5 = random).
+Monte Carlo value for Pi is 3.141776714 (error 0.01 percent).
+Serial correlation coefficient is -0.000234 (totally uncorrelated = 0.0).
+luisfp@luiss-MBP chapter_01 % 
